@@ -1,0 +1,111 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.masked {
+  position: relative;
+  background: url('https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg')
+    no-repeat center center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: cover;
+}
+
+.masked::before {
+  content: 'macbook pro.';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: cover;
+  filter: blur(40px);
+  opacity: 0.8;
+}
+
+.masked::after {
+  content: 'macbook pro.';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg')
+    no-repeat center center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: cover;
+  filter: blur(20px);
+  opacity: 0.8;
+}
+
+.line {
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .masked {
+    font-size: 3rem;
+  }
+
+  .navbar a {
+    font-size: 10px;
+  }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    gap: 8px;
+  }
+
+  .masked {
+    font-size: 5rem;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .navbar {
+    gap: 10px;
+  }
+
+  .masked {
+    font-size: 7rem;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
